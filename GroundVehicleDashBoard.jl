@@ -5,7 +5,7 @@ ground_vehicle_path = "/home/teamlary/mintsData/referenceMQTT/001e0610c2e7/"
 ground_vehicle_sensor_list = filter!(s->occursin(r".json", s),readdir(ground_vehicle_path))
 ground_vehicle_sensor_path_list = ground_vehicle_path .* ground_vehicle_sensor_list
 
-#Creating a single DataFrame with all the Data
+#Creating a single DataFrame with all the json files
 df_ls = map((x)-> DataFrame(JSON3.read(read(x))),ground_vehicle_sensor_path_list)
 df_combined = reduce(vcat, df_ls, cols=:union)
 
