@@ -1,1 +1,1 @@
-MINTS julia Dashboard
+MINTS Jl Dashboard
