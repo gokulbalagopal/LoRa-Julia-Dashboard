@@ -1,1 +1,1 @@
-# LoRa-Julia-Dashboard
+MINTS julia Dashboard
